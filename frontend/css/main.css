@@ -159,4 +159,20 @@ main {
   margin-top: 1rem;
 }
 
+.footer {
+  width: 100%;
+  position: absolute;
+  bottom: 0.5rem;
+}
+.footer .attribution {
+  width: 30rem;
+  margin: 0 auto;
+}
+.footer .attribution a {
+  text-decoration: underline;
+}
+.footer .attribution a:hover {
+  color: hsl(35deg, 77%, 62%);
+}
+
 /*# sourceMappingURL=main.css.map */
