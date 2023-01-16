@@ -127,4 +127,36 @@ main {
   color: hsl(233deg, 8%, 79%);
 }
 
+.section-second {
+  margin-top: 6rem;
+  display: flex;
+  justify-content: space-between;
+  font-size: 1.6rem;
+  color: hsl(236deg, 13%, 42%);
+}
+.section-second__item {
+  width: 31%;
+}
+.section-second__item img {
+  width: 10rem;
+  float: left;
+  margin-right: 1.8rem;
+}
+.section-second__item h3 {
+  font-size: 2.8rem;
+  color: hsl(233deg, 8%, 79%);
+  margin-bottom: 1rem;
+}
+.section-second__item a {
+  font-weight: 700;
+  color: hsl(240deg, 100%, 5%);
+}
+.section-second__item a:hover {
+  color: hsl(5deg, 85%, 63%);
+}
+.section-second__item p {
+  font-size: 1.5rem;
+  margin-top: 1rem;
+}
+
 /*# sourceMappingURL=main.css.map */
