@@ -6,11 +6,28 @@
     color: $color-dark-grayish-blue;
 
     &__nav {
-        display: flex;
-        gap: 3rem;
 
         a:hover {
             color: $color-soft-orange;
+        }
+
+        &-links {
+            display: flex;
+            gap: 3rem;
+        }
+    }
+
+    .btn-menu {
+        display: none;
+    }
+
+    @media screen and (max-width: $break-mobile) {
+        .btn-menu {
+            display: block;
+        }
+                
+        &__nav-links {
+            display: none;
         }
     }
 }

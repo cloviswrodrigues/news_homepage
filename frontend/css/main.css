@@ -14,7 +14,7 @@ html {
 }
 
 .container {
-  width: 100%;
+  width: 90%;
   max-width: 110rem;
   margin: 0 auto;
 }
@@ -28,6 +28,10 @@ a {
   cursor: pointer;
 }
 
+.d-none {
+  display: none;
+}
+
 .header {
   display: flex;
   justify-content: space-between;
@@ -35,12 +39,23 @@ a {
   font-size: 1.5rem;
   color: hsl(236deg, 13%, 42%);
 }
-.header__nav {
+.header__nav a:hover {
+  color: hsl(35deg, 77%, 62%);
+}
+.header__nav-links {
   display: flex;
   gap: 3rem;
 }
-.header__nav a:hover {
-  color: hsl(35deg, 77%, 62%);
+.header .btn-menu {
+  display: none;
+}
+@media screen and (max-width: 900px) {
+  .header .btn-menu {
+    display: block;
+  }
+  .header__nav-links {
+    display: none;
+  }
 }
 
 main {
