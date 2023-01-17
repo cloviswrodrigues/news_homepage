@@ -20,7 +20,14 @@ html {
 }
 
 body {
-  margin-top: 5rem;
+  min-height: 100vh;
+  position: relative;
+  padding: 5rem 0;
+}
+@media screen and (max-width: 900px) {
+  body {
+    padding: 3rem 0 8rem;
+  }
 }
 
 a {
@@ -112,6 +119,43 @@ main {
 .grid .btn:hover {
   background-color: hsl(240deg, 100%, 5%);
 }
+@media screen and (max-width: 900px) {
+  .grid {
+    grid-template: 300px repeat(3, auto)/1fr;
+    gap: 1rem;
+  }
+  .grid-item-1 {
+    background: url(../assets/images/image-web-3-mobile.jpg) no-repeat;
+    background-size: contain;
+  }
+  .grid-item-4 {
+    margin-top: 5rem;
+  }
+  .grid-item-1 {
+    grid-row: auto;
+    grid-column: 1;
+  }
+  .grid-item-2 {
+    grid-row: auto;
+    grid-column: 1;
+  }
+  .grid-item-3 {
+    grid-row: auto;
+    grid-column: 1;
+  }
+  .grid-item-4 {
+    grid-row: auto;
+    grid-column: 1;
+  }
+  .grid h1 {
+    font-size: 4rem;
+    font-weight: 800;
+    line-height: 4rem;
+  }
+  .grid p {
+    font-size: 1.4rem;
+  }
+}
 
 .new {
   background-color: hsl(240deg, 100%, 5%);
@@ -141,6 +185,15 @@ main {
   line-height: 3rem;
   color: hsl(233deg, 8%, 79%);
 }
+@media screen and (max-width: 900px) {
+  .new a {
+    font-size: 1.8rem;
+  }
+  .new p {
+    font-size: 1.4rem;
+    line-height: 2.5rem;
+  }
+}
 
 .section-second {
   margin-top: 6rem;
@@ -151,6 +204,7 @@ main {
 }
 .section-second__item {
   width: 31%;
+  flex-grow: 1;
 }
 .section-second__item img {
   width: 10rem;
@@ -163,6 +217,7 @@ main {
   margin-bottom: 1rem;
 }
 .section-second__item a {
+  font-size: 1.7rem;
   font-weight: 700;
   color: hsl(240deg, 100%, 5%);
 }
@@ -171,7 +226,17 @@ main {
 }
 .section-second__item p {
   font-size: 1.5rem;
+  line-height: 2.5rem;
   margin-top: 1rem;
+}
+@media screen and (max-width: 900px) {
+  .section-second {
+    flex-direction: column;
+    gap: 3rem;
+  }
+  .section-second__item {
+    width: 100%;
+  }
 }
 
 .footer {

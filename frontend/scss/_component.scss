@@ -60,6 +60,37 @@ main {
             background-color: $color-very-dark-blue;
         }
     }
+
+    @media screen and (max-width: $break-mobile) {
+        grid-template: 300px repeat(3, auto) / 1fr;
+        gap: 1rem;
+
+        &-item-1 {
+            background: url(../assets/images/image-web-3-mobile.jpg) no-repeat;
+            background-size: contain;
+        }
+
+        &-item-4 {
+            margin-top: 5rem;
+        }
+
+        @for $i from 1 through 4 {
+            &-item-#{$i} {
+                grid-row: auto;
+                grid-column: 1;
+            }
+        }
+
+        h1 {
+            font-size: 4rem;
+            font-weight: 800;
+            line-height: 4rem;
+        }    
+
+        p {
+            font-size: 1.4rem;
+        }
+    }
 }
 
 .new {
@@ -95,6 +126,17 @@ main {
         line-height: 3rem;
         color: $color-grayish-blue;
     }
+
+    @media screen and (max-width: $break-mobile) {
+        a {
+            font-size: 1.8rem;
+        }
+
+        p {
+            font-size: 1.4rem;
+            line-height: 2.5rem;
+        }
+    }
 }
 
 .section-second {
@@ -106,6 +148,7 @@ main {
 
     &__item {
         width: 31%;
+        flex-grow: 1;
 
         img {
             width: 10rem;
@@ -120,6 +163,7 @@ main {
         }
 
         a {
+            font-size: 1.7rem;
             font-weight: 700;
             color: $color-very-dark-blue;
 
@@ -129,9 +173,18 @@ main {
         }
 
         p {
-            font-size: 1.5rem;
-                        
+            font-size: 1.5rem;                        
+            line-height: 2.5rem;
             margin-top: 1rem;
+        }
+    }
+
+    @media screen and (max-width: $break-mobile) { 
+        flex-direction: column;
+        gap: 3rem;
+
+        &__item { 
+            width: 100%;
         }
     }
 }
