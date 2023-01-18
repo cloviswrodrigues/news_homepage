@@ -21,13 +21,30 @@
         display: none;
     }
 
+    .active-menu {
+       visibility: visible;
+    }
+
     @media screen and (max-width: $break-mobile) {
         .btn-menu {
+            position: relative;
             display: block;
+            z-index: 1;
         }
                 
         &__nav-links {
-            display: none;
+            visibility: hidden;
+            display: flex;
+            flex-direction: column;
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 70%;
+            height: 100%;
+            background-color: $color-off-white;
+            padding: 15rem 3rem;
+            font-size: 2rem;
+            color: $color-very-dark-blue;
         }
     }
 }

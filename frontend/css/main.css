@@ -35,6 +35,19 @@ a {
   cursor: pointer;
 }
 
+.darken {
+  overflow: hidden;
+}
+.darken::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  width: 100vw;
+  height: 100%;
+  background-color: hsl(240deg, 100%, 5%);
+  opacity: 0.4;
+}
+
 .d-none {
   display: none;
 }
@@ -56,12 +69,28 @@ a {
 .header .btn-menu {
   display: none;
 }
+.header .active-menu {
+  visibility: visible;
+}
 @media screen and (max-width: 900px) {
   .header .btn-menu {
+    position: relative;
     display: block;
+    z-index: 1;
   }
   .header__nav-links {
-    display: none;
+    visibility: hidden;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 70%;
+    height: 100%;
+    background-color: hsl(36deg, 100%, 99%);
+    padding: 15rem 3rem;
+    font-size: 2rem;
+    color: hsl(240deg, 100%, 5%);
   }
 }
 
